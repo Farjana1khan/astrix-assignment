@@ -67,7 +67,7 @@ function RightSection() {
           </div>
           <div>
             <img
-             className="inline max-md:w-50  -mt-[16px] max-md:h-[124px] h-[198px] w-[192px]"
+             className="inline max-md:w-50  -mt-[19px] max-md:h-[124px] h-[177px] w-[192px]"
               src={Image14}
               alt="icons"
               width={192}
