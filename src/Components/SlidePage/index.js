@@ -41,13 +41,21 @@ const SliderPage = () => {
   }, []);
 
 
+  const [isLeftClicked, setIsLeftClicked] = useState(false);
+
+  
+
   const handleBackClick = () => {
+    setIsLeftClicked(true);
     setCurrentSlide((prev) => (prev - 1 + 4) % 4); // Adjust 4 to totalSlides
   };
 
   const handleNextClick = () => {
+    setIsLeftClicked(false);
     setCurrentSlide((prev) => (prev + 1) % 4); // Adjust 4 to totalSlides
   };
+
+
 
 
   return (
@@ -156,11 +164,11 @@ const SliderPage = () => {
             </Slide>
           </Slider>
           <div className="flex justify-end mt-20 mr-20">
-            <div className="px-2 py-2 justify-center space-x-2 bg-[#a8a7a7] rounded-full">
-              <ButtonBack className="justify-center custom-button" onClick={handleBackClick}>
+            <div className="px-2 py-2 pb-1 leading-2 justify-center space-x-2 bg-[#000] rounded-full">
+              <ButtonBack className="justify-center text-white custom-button" onClick={handleBackClick}>
                 <FaAngleLeft />
               </ButtonBack>
-              <ButtonNext className="justify-center custom-button"  onClick={handleNextClick}>
+              <ButtonNext className="justify-center text-white custom-button"  onClick={handleNextClick}>
                 <FaAngleRight />
               </ButtonNext>
             </div>
@@ -171,7 +179,7 @@ const SliderPage = () => {
             onClick={() => handleEventsClick(1)}
             className={`whitespace-nowrap items-center py-4 px-14 font-bold text-lg leading-4 rounded-full outline-none focus:ring-2 text-black ${
               activeTab === 1
-                ? "bg-[#484E56] border-[#484E56] cursor-pointer text-white"
+                ? "bg-[#484E56] border-[#484E56]  text-white  focus:ring-2"
                 : "bg-[#282B30] border-[#282B30] text-white cursor-default"
             }`}
           >
@@ -181,7 +189,7 @@ const SliderPage = () => {
             onClick={() => handleCollectionsClick(2)}
             className={`whitespace-nowrap items-center py-4 px-14 font-bold text-lg left-4 rounded-full outline-none focus:ring-2 text-black ${
               activeTab === 2
-                ? "bg-[#484E56] border-[#484E56] text-white"
+                ? "bg-[#484E56] border-[#484E56] text-white  focus:ring-2"
                 : "bg-[#282B30] border-[#282B30] text-white"
             }`}
           >
