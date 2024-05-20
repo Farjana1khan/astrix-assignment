@@ -7,7 +7,7 @@ import React from 'react';
   return (
 
     <>
-    <div  className="relative w-20 h-screen overflow-hidden ml-36"  style={{
+    <div  className="relative w-20 h-screen overflow-hidden ml-36 max-md:hidden"  style={{
      
    
       background: 'repeating-linear-gradient(to right, #B9A0FF 20px, #B9A0FF 20px, #B9A0FF 40px)',

@@ -10,11 +10,11 @@ function RightSection() {
   return (
     <>
     
-      <div className="px-10 py-10 text-white">
+      <div className="px-10 py-10 text-white ">
         <p className="text-[26px] font-bold leading-8 w-80">
           Explore Youre First Event
         </p>
-        <h2 className="text-[57px] font-bold leading-[71px] pt-10">
+        <h2 className="text-[57px] max-md:text-2xl font-bold leading-[71px] pt-10">
           Event Name
         </h2>
         <div className="flex justify-between grid-cols-3 pt-4">
@@ -36,7 +36,7 @@ function RightSection() {
               width={30}
               height={30}
             />
-            <p className="text-[22px] leading-7 font-semibold">
+            <p className="text-[22px] max-md:text-sm leading-7 font-semibold">
               04/3/2024 @19:00
             </p>
           </div>
@@ -53,7 +53,7 @@ function RightSection() {
         <div className="flex justify-center mt-20">
           <div>
             <img
-              className="inline"
+              className="inline max-md:w-40"
               src={image157}
               alt="icons"
               width={145}
@@ -67,22 +67,21 @@ function RightSection() {
           </div>
           <div>
             <img
-              className="inline"
+             className="inline max-md:w-50  -mt-[16px] max-md:h-[124px] h-[198px] w-[192px]"
               src={Image14}
               alt="icons"
               width={192}
               height={80}
               style={{
-                width: " 192px",
-                height: "198px",
-                marginTop: "-26px",
+               
+              
                 borderRadius:"8px"
               }}
             />
           </div>
           <div>
             <img
-              className="inline"
+             className="inline max-md:w-40"
               src={image158}
               alt="icons"
               width={145}
@@ -109,7 +108,7 @@ function RightSection() {
             
             />
           </div>
-          <div className="justify-center "><button className="bg-[#FFCA5F] mt-[58px] border-[#FFCA5F] rounded-[40px] font-bold text-2xl leading-8 text-[#1A1D21] py-2 px-5">
+          <div className="justify-center "><button className="bg-[#FFCA5F] mt-[58px] max-md:mt-16 border-[#FFCA5F] rounded-[40px] font-bold text-2xl max-md:text-base leading-8 text-[#1A1D21] py-2 px-5">
             Join Waitlist
           </button></div>
           </div>

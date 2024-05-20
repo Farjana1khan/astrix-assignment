@@ -59,15 +59,15 @@ const SliderPage = () => {
 
 
   return (
-    <div className="pl-0 -mr-48 mt-18 carousel__container" style={{ width: "900px" }}>
-      <div>
+    <div className="pl-0 -mr-48 max-md:-mr-0 mt-18 carousel__container max-md:w-full">
+      <div className=" w-[900px] max-md:w-[0px]">
         <img
-          className="inline"
+          className="inline max-md:w-[291px] w-[412px] h-[630px]"
           src={ASTRIXEVENTS}
           alt="icons"
           width={400}
           height={1200}
-          style={{ width: "412px", height: "630px" }}
+          // style={{ width: "412px", height: "630px" }}
         />
       </div>
       <div className="-mt-[560px]">
@@ -102,7 +102,7 @@ const SliderPage = () => {
                 style={{ width: "412px", height: "630px" }}
               />
               <div className={`px-5 space-x-2 mt-44 text-container ${currentSlide === 1 ? 'hidden' : 'visible'}`}>
-                <p className="text-[46px] leading-[71px] font-bold text-white text-start pl-3">Event Name</p>
+                <p className="text-[46px] max-md:text-xl leading-[71px] font-bold text-white text-start pl-3">Event Name</p>
                 <div className="flex pt-4 space-x-4">
                   <img
                     className="inline"
@@ -125,7 +125,7 @@ const SliderPage = () => {
                 style={{ width: "412px", height: "630px" }}
               />
               <div className={`px-5 space-x-2 mt-44 text-container ${currentSlide === 2 ? 'hidden' : 'visible'}`}>
-                <p className="text-[46px] leading-[71px] ml-0 font-bold text-white text-start pl-3">Event Name</p>
+                <p className="text-[46px] max-md:text-xl leading-[71px] ml-0 font-bold text-white text-start pl-3">Event Name</p>
                 <div className="flex pt-4 space-x-4">
                   <img
                     className="inline"
@@ -149,7 +149,7 @@ const SliderPage = () => {
                 
               />
                 <div className={`px-5 space-x-2 mt-44 text-container ${currentSlide === 3 ? 'hidden' : 'visible'}`}>
-                <p className="text-[46px] leading-[71px] font-bold text-white text-start pl-3">Event Name</p>
+                <p className="text-[46px] max-md:text-xl leading-[71px] font-bold text-white text-start pl-3">Event Name</p>
                 <div className="flex pt-4 space-x-4">
                   <img
                     className="inline"
@@ -163,7 +163,8 @@ const SliderPage = () => {
               </div>
             </Slide>
           </Slider>
-          <div className="flex justify-end mt-20 mr-20">
+         <div>
+         <div className="flex justify-end mt-20 mr-20 max-md:-mr-0">
             <div className="px-2 py-2 pb-1 leading-2 justify-center space-x-2 bg-[#000] rounded-full">
               <ButtonBack className="justify-center text-white custom-button" onClick={handleBackClick}>
                 <FaAngleLeft />
@@ -173,11 +174,10 @@ const SliderPage = () => {
               </ButtonNext>
             </div>
           </div>
-        </CarouselProvider>
-        <div className="flex justify-start mb-4 space-x-6 shadow-2xl max-md:gap-y-3 row bg-[#282B30] rounded-full w-[300px]">
+          <div className="flex justify-start mb-4 space-x-6 shadow-2xl max-md:gap-y-3 row bg-[#282B30] rounded-full w-[300px] max-md:w-60">
           <button
             onClick={() => handleEventsClick(1)}
-            className={`whitespace-nowrap items-center py-4 px-14 font-bold text-lg leading-4 rounded-full outline-none focus:ring-2 text-black ${
+            className={`whitespace-nowrap items-center py-4 px-14 max-md:px-4 font-bold text-lg leading-4 rounded-full outline-none focus:ring-2 text-black ${
               activeTab === 1
                 ? "bg-[#484E56] border-[#484E56]  text-white  focus:ring-2"
                 : "bg-[#282B30] border-[#282B30] text-white cursor-default"
@@ -187,7 +187,7 @@ const SliderPage = () => {
           </button>
           <button
             onClick={() => handleCollectionsClick(2)}
-            className={`whitespace-nowrap items-center py-4 px-14 font-bold text-lg left-4 rounded-full outline-none focus:ring-2 text-black ${
+            className={`whitespace-nowrap items-center py-4 px-14  max-md:px-4 font-bold text-lg left-4 rounded-full outline-none focus:ring-2 text-black ${
               activeTab === 2
                 ? "bg-[#484E56] border-[#484E56] text-white  focus:ring-2"
                 : "bg-[#282B30] border-[#282B30] text-white"
@@ -196,6 +196,9 @@ const SliderPage = () => {
             Collections
           </button>
         </div>
+         </div>
+        </CarouselProvider>
+       
       </div>
       <style jsx>{`
         .zoom {
